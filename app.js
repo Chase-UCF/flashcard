@@ -16,18 +16,18 @@ ClozeCard.prototype.showCloze = function () {
   console.log(this.cloze);
 };
 
-ClozeCard.prototype.showPartial = function () {
+ClozeCard.prototype.showSome = function () {
   if (this.text.indexOf(this.cloze) >= 0) {
     var newText = this.text.replace(this.cloze, "...");
     console.log(newText);
   }
 };
 
-ClozeCard.prototype.showText = function () {
+ClozeCard.prototype.showFull = function () {
   console.log(this.text);
 };
 
 var meCloze = new ClozeCard("Chase does not always understand", "Chase");
 meCloze.showCloze();
-meCloze.showPartial();
-meCloze.showText();
+meCloze.showSome();
+meCloze.showFull();
